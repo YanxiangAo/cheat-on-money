@@ -75,7 +75,19 @@ done
 
 这样不会改动 Claude Code 的 `~/.claude/skills/` 安装方式；两套安装可以同时存在。Codex 读取 skill 列表通常需要重启应用或开启新会话。
 
-> 说明：`SKILL.md` 里的 `allowed-tools` 是 Claude Code 权限声明。Codex 只依赖 `name` / `description` 触发 skill，会忽略这类 Claude 专属字段。
+> 说明：`SKILL.md` 里的 `allowed-tools` 是 Claude Code 权限声明。Codex / Hermes 只依赖 `name` / `description` 触发 skill，会忽略这类 Claude 专属字段。
+
+### Hermes Agent
+
+把各子 skill 安装到 `~/.hermes/skills/`（支持嵌套目录，整个仓库作为一个 category）：
+
+```bash
+./install-hermes.sh
+```
+
+安装后仓库以 `cheat-on-money` 为 category 注册到 `~/.hermes/skills/`，6 个子 skill 自动发现。Hermes 的 `skill_view` 和 `skills_list` 工具可直接读取。原有相对路径（`../../shared-references/` 等）无需改动即可正确解析。
+
+> 三套安装（Claude Code / Codex / Hermes）互不冲突，可以同时存在。
 
 ## 典型流程
 

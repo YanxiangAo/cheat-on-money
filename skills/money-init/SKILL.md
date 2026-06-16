@@ -11,7 +11,7 @@ allowed-tools: Bash(*), Read, Write, Edit, Glob, Skill
 
 ## 跨平台说明（一次性，下文不再重复）
 
-下文写的 `../../shared-references/`、`../../templates/` 是 repo / Claude Code 的路径；**Codex 安装下改读当前 skill 目录的 `references/`、`templates/`**（`install-codex.sh` 已软链进来）。`allowed-tools` 是 Claude Code 权限声明，Codex 忽略。
+下文写的 `../../shared-references/`、`../../templates/` 是 repo / Claude Code 的路径；**Codex 安装下改读当前 skill 目录的 `references/`、`templates/`**（`install-codex.sh` 已软链进来）；**Hermes 安装下保留原相对路径**（`install-hermes.sh` 把整个 repo 链到 `~/.hermes/skills/cheat-on-money/`，`../../` 自然解析到仓库根目录）。`allowed-tools` 是 Claude Code 权限声明，Codex / Hermes 忽略。
 
 ## 设计哲学（必须先认同）
 

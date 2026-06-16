@@ -11,8 +11,8 @@ allowed-tools: Bash(*), Read, Write, Edit, Glob, WebSearch, WebFetch, Skill
 
 ## 跨平台说明（一次性，下文不再重复）
 
-- **资源路径**：下文写的 `../../shared-references/` 是 repo / Claude Code 的路径；**Codex 安装下改读当前 skill 目录的 `references/`**（`install-codex.sh` 已软链进来）。
-- **网页检索/打开网页**：Claude Code 用 WebSearch / WebFetch；Codex 用其内置等价能力。`allowed-tools` 是 Claude Code 权限声明，Codex 忽略。
+- **资源路径**：下文写的 `../../shared-references/` 是 repo / Claude Code 的路径；**Codex 安装下改读当前 skill 目录的 `references/`**（`install-codex.sh` 已软链进来）；**Hermes 安装下保留原相对路径**（`install-hermes.sh` 把整个 repo 链到 `~/.hermes/skills/cheat-on-money/`，`../../` 自然解析到仓库根目录）。
+- **网页检索/打开网页**：Claude Code 用 WebSearch / WebFetch；Codex 用其内置等价能力；Hermes 用 `web_search` / `web_extract`。`allowed-tools` 是 Claude Code 权限声明，Codex / Hermes 忽略。
 
 ## 唯一标准来源
 

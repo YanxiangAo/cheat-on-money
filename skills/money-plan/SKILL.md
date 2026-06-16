@@ -11,7 +11,7 @@ allowed-tools: Bash(*), Read, Write, Edit, Glob, WebSearch, WebFetch, Skill
 
 ## 跨平台说明（一次性，下文不再重复）
 
-下文"网页检索/打开网页"：Claude Code 用 WebSearch / WebFetch，Codex 用其内置等价能力。`allowed-tools` 是 Claude Code 权限声明，Codex 忽略。
+下文"网页检索/打开网页"：Claude Code 用 WebSearch / WebFetch，Codex 用其内置等价能力，Hermes 用 `web_search` / `web_extract`。`allowed-tools` 是 Claude Code 权限声明，Codex / Hermes 忽略。
 
 ## 前置检查
 - 读 `.money-state.json` 找该机会。若未验证过或判定为高危 ❌，**先劝用户走 `money-verify`**，不直接做计划。
